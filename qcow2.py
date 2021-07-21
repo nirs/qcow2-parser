@@ -65,6 +65,6 @@ if __name__ == "__main__":
     import sys
     import json
     filename = sys.argv[1]
-    with open(filename) as f:
+    with open(filename, "rb") as f:
         info = parse(f)
-        print json.dumps(info, indent=4, sort_keys=True)
+        print(json.dumps(info, indent=4, sort_keys=True))
